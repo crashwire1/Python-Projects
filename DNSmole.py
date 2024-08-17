@@ -1,4 +1,5 @@
 !#/usr/bin/python 
+#This program is designed to be a post-exploitaiton/data exfiltration tool, that uses DNS Tunneling to extract target file data and prepend the encoded data to DNS requests
 
 import argparse
 import subprocess 
