@@ -1,4 +1,4 @@
-!#/usr/bin/python 
+#!/usr/bin/python 
 #A post-exploitaiton/data exfiltration tool, that uses DNS Tunneling to extract target file data and prepend the encoded data
 #to DNS requests sent to the attacker's server
 
