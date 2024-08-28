@@ -1,4 +1,4 @@
-***PYTHON SCRIPTS***
+# PYTHON SCRIPTS
                                                     
 Author: Crashwire 
 
@@ -27,3 +27,8 @@ Clone the repo and run any script using Python 3:
 git clone https://github.com/yourusername/Python-Scripts.git
 cd Python-Scripts
 python3 Reverse_snake.py
+```
+Make sure to review and adjust any configurations as necessary for your specific use-case.
+
+⚠️ Disclaimer
+Use these scripts responsibly. They are intended for educational purposes and authorized security assessments only. The author takes no responsibility for any misuse or damage caused.
