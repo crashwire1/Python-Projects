@@ -25,8 +25,6 @@ Clone the repo and run any script using Python 3:
 
 ```bash
 git clone https://github.com/yourusername/Python-Scripts.git
-cd Python-Scripts
-python3 Reverse_snake.py
 ```
 Make sure to review and adjust any configurations as necessary for your specific use-case.
 
