@@ -24,7 +24,7 @@ Author: Crashwire
 Clone the repo and run any script using Python 3:
 
 ```bash
-git clone https://github.com/yourusername/Python-Scripts.git
+git clone https://github.com/crashwire1/Python-Scripts.git
 ```
 Make sure to review and adjust any configurations as necessary for your specific use-case.
 
