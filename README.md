@@ -8,7 +8,7 @@ Author: Crashwire
 
 ## ⚙️ Current Scripts
 
-1. **`Reverse_snake.py`** 🐍  
+1. **`Reverse_shell.py`** 🐍  
    A simple reverse shell that connects back to a remote server, giving you access to a target machine's command line.
 
 2. **`DNS_mole.py`** 🕳️  
