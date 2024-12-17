@@ -17,6 +17,8 @@ Author: Crashwire
 3. **`Metamap.py`** 🌐  
    Combines the output of Nmap scans with Metasploit module searches, automatically matching discovered vulnerabilities to available exploits. 
 
+4. **`Sniffl.py`** 📡
+   A simple program that sniffs WiFi beacon and probe requests, helping you identify nearby wireless networks and devices broadcasting for connections.
 ---
 
 ## 🚀 Getting Started
