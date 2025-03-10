@@ -13,13 +13,13 @@ def port_scan(target, port):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.settimeout(1)
         result = s.connect_ex((target, port)) #error indicator 
-        if result ==0:
+        if result == 0:
             print(f'Port {port} is open')
         s.close()
-    except socket.error as error:
-        print(f'Socket error on port {port}: {error}')
-    except Exception as error:
-        print(f'Unexpected error on port {port}: {error}')
+    except socket.error as e:
+        print(f'Socket error on port {port}: {e}')
+    except Exception as e:
+        print(f'Unexpected error on port {port}: {e}')
 
 #Main function - arg validation and target definition
 def main():
@@ -53,8 +53,8 @@ def main():
     except KeyboardInterrupt:
         print("\nExiting program.")
         sys.exit(0)
-    except socket.error as error:
-        print(f'Socket error: {error}')
+    except socket.error as e:
+        print(f'Socket error: {e}')
         sys.exit(1)
 
     print("\nScan Completed!")
