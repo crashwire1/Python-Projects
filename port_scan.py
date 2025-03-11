@@ -39,7 +39,7 @@ def main():
     print("            (0.0)")
     print("          '=.|m|.='")
     print("          .='`\"``=.")
-    print("          PORT SCANNER")
+    print("         PORT SCANNER")
     print("*" * 30)
     print("Author: Crashwire -> (Credit: Heath Adams/TCM Sec)")
     print("-" * 50)
