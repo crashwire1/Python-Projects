@@ -11,7 +11,7 @@ Author: Crashwire
 1. **`revshell.py`** 🐍  
    A simple reverse shell that connects back to a remote server, giving you access to a target machine's command line.
 
-2. **`dns_mole.py`** 🕳️  
+2. **`dns_mole.py`** 🕳️  (COMING SOON)
    A post-exploitation tool leveraging DNS tunneling to stealthily exfiltrate data out of a compromised network without raising alarms.
 
 3. **`port_scan.py`** 🔍  
