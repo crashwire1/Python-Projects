@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-#Credit to Heath Adams and TCM Sec
-
 from datetime import datetime
 import socket
 import sys
@@ -36,6 +34,14 @@ def main():
         sys.exit(1)
 
     #Banner
+    print("*" * 30)
+    print("             .-.")
+    print("            (0.0)")
+    print("          '=.|m|.='")
+    print("          .='`\"``=.")
+    print("          PORT SCANNER")
+    print("*" * 30)
+    print("Author: Crashwire -> (Credit: Heath Adams/TCM Sec)")
     print("-" * 50)
     print(f'Scanning target {target_ip}')
     print(f'Time started: {datetime.now()}')
