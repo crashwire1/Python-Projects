@@ -14,10 +14,10 @@ Author: Crashwire
 2. **`dns_mole.py`** 🕳️  (COMING SOON)
    A post-exploitation tool leveraging DNS tunneling to stealthily exfiltrate data out of a compromised network without raising alarms.
 
-3. **`port_scan.py`** 🔍  
+4. **`port_scan.py`** 🔍  
    A lightweight port scanner that helps identify open ports and services running on a target system. 
 
-4. **`sniffl.py`** 📡
+5. **`sniffl.py`** 📡
    A simple program that sniffs WiFi beacon and probe requests, helping you identify nearby wireless networks and devices broadcasting for connections.
 ---
 
