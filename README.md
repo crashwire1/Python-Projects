@@ -1,8 +1,8 @@
-# PYTHON SCRIPTS
+# PYTHON PROJECTS
                                                     
 Author: Crashwire 
 
-**Python-Scripts** is a collection of Python programs designed for Red Team and Pentesting use-cases. Each script is tailored for specific offensive security needs, from crafting reverse shells to data exfiltration and vulnerability mapping. Whether you're a pentester looking to automate tasks or a red teamer needing specialized tools, this repo has something for you!
+**Python-Projects** is a collection of Python programs designed for Red Team and Pentesting use-cases. Each script/tool is tailored for specific offensive security needs, from crafting reverse shells to data exfiltration and vulnerability mapping. Whether you're a pentester looking to automate tasks or a red teamer needing specialized tools, this repo has something for you!
 
 ---
 
