@@ -14,7 +14,7 @@ def port_scan(target, port):
         s.settimeout(1)
         result = s.connect_ex((target, port)) #error indicator 
         if result == 0:
-            print(f'Port {port} is open')
+            print(f'>> Port {port} is open')
         s.close()
     except socket.error as e:
         print(f'Socket error on port {port}: {e}')
@@ -27,7 +27,7 @@ def main():
         target = sys.argv[1]
     else: 
         print('Expected argument')   
-        print("Usage: python3 scan.py <target IP Address>") 
+        print("Usage: python3 port_scan.py <target IP Address>") 
         sys.exit(1)
     try: 
         target_ip = socket.gethostbyname(target)
