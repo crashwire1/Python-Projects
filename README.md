@@ -9,13 +9,13 @@ Author: Crashwire
 ## ⚙️ Current Scripts
 
 1. **`revshell.py`** 🐍  
-   A simple reverse shell that connects back to a remote server, giving you access to a target machine's command line. (Utilize Netcat listener to receive shell)
+   A simple reverse shell that connects back to a remote server, giving you access to a target machine's command line. (Run from a Linux machine, and utilize Netcat listener to receive shell)
 
 2. **`dns_mole.py`** 🕳️
    A post-exploitation tool leveraging DNS tunneling to stealthily exfiltrate data out of a compromised network without raising alarms. (COMING SOON)
 
 5. **`port_scan.py`** 🔍  
-   A lightweight port scanner that helps identify open ports and services running on a target system. (Run from a Linux machine)
+   A lightweight port scanner that helps identify open ports and services running on a target system. 
 
 6. **`sniffl.py`** 📡
    A simple program that sniffs WiFi beacon and probe requests, helping you identify nearby wireless networks and devices broadcasting for connections and outputs the data into a text file. (Ensure wireless adapter is in monitor mode)
