@@ -28,7 +28,7 @@ def packet_handler(pkt):
                 f = open("sniffl-output.txt", "a", encoding="utf-8")
                 f.write(f"[Beacon] SSID: {ssid}, BSSID: {pkt.addr2}, Channel: {channel}\n")
     except Exception as e:
-        print(f"Unexpected error (Ensure your interface is in monitor mode) {e}")
+        print(f"Error: {e} (Ensure your interface is in monitor mode)")
 
 print("\nListening for Probe Requests and Beacon Frames...\n")
 sniff(iface="wlan0mon", prn=packet_handler, store=False)
